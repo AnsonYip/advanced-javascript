@@ -2,23 +2,34 @@
 class BasicInput extends React.Component {
   constructor(props) {
     super(props);
-    this.handleChange = this.handleChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     this.state = {
-      userInput: ''
+      userInput: '', output:[]
     };
   }
   handleChange(e) {
     this.setState({userInput: e.target.value});
   }
+  handleClick(){
+      this.state.output.push(<li>{this.state.userInput}</li>);                  
+        this.setState({output: this.state.output});
+      
+        //this.setState({output: e.target.output});
+  }
+    
+  
   render() {
+      //you can put normal javascript here
     return (
       <div>
           <p>
             Please enter some input
           </p>
           <input onChange={this.handleChange}/>
+            <button onClick={this.handleClick}>Add</button>
           <p>
-            You entered: {this.state.userInput}
+            {this.state.output}
           </p>
       </div>
     ); 
