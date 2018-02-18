@@ -12,7 +12,7 @@ class BasicInput extends React.Component {
     this.setState({userInput: e.target.value});
   }
   handleClick(){
-      this.state.output.push(<li>{this.state.userInput}</li>);                  
+      this.state.output.push(<li>{this.state.userInput}</li>);                   
         this.setState({output: this.state.output});
       
         //this.setState({output: e.target.output});
