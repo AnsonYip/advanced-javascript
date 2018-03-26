@@ -1,0 +1,14 @@
+Part 1.
+
+1. http://pokeapi.co/api/v2/pokemon/charmander/
+
+2. Attribute: id, moves, species
+
+    Description: The identifier for this pokemon resource,
+                A list of moves along with learn methods and level details pertaining to specific version groups,
+                The species this Pokémon belongs to
+    
+    Data type: integer, list PokemonMove, NamedAPIResource(PokemonSpecies)
+
+3. https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png
+
