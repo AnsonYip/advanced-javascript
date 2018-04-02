@@ -1,0 +1,17 @@
+.example-style {
+  background-color: lightcyan;
+  color: indigo;
+    
+  text-align: center;
+}
+
+.input{
+    background-color: lightgoldenrodyellow;
+}
+
+.button{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
