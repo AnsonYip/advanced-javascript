@@ -25,6 +25,7 @@ function getAjaxPromise(url) {
     class PokePage extends React.Component {
     constructor(props) {
       super(props);
+<<<<<<< HEAD
         
         this.enteredInput = this.enteredInput.bind(this);
         this.searchPoke = this.searchPoke.bind(this);
@@ -47,6 +48,15 @@ function getAjaxPromise(url) {
         
         
         
+=======
+        this.enteredInput = this.enteredInput.bind(this);
+        this.searchPoke = this.searchPoke.bind(this);
+        this.getAjaxPromise = this.getAjaxPromise.bind(this);
+        this.state = {
+            inputInfo: ''
+        };
+    }
+>>>>>>> 5baec0c6791a8faebd9e750170521e401b07d9db
     
     enteredInput(e){
         this.setState({inputInfo: e.target.value});
@@ -56,6 +66,7 @@ function getAjaxPromise(url) {
         let forwardSlash = "/";
         let url = httpsDomain+this.state.inputInfo+forwardSlash;
         
+<<<<<<< HEAD
         getAjaxPromise(url).then(function(res){
               let data = JSON.stringify(res);
               return data;
@@ -101,6 +112,21 @@ function getAjaxPromise(url) {
                     types:{this.state.types}
                     moves:{this.state.moves}
                 </p>
+=======
+        this.setState({data: this.getAjaxPromise(url).then(function(res){
+            let info = JSON.stringify(res);
+            return info;
+        })
+    })
+}
+    
+        
+    render(){
+        return(
+            <div>
+                <input class="input" onChange={this.enteredInput}/>
+                <button class="button" type="button" onClick={this.searchPoke}>search</button>
+>>>>>>> 5baec0c6791a8faebd9e750170521e401b07d9db
             </div>
         );
     }
